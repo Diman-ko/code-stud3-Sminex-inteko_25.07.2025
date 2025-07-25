@@ -15,7 +15,7 @@
 
 .card__picture {
   object-fit: cover; /* Картинка заполняет контейнер без искажений */
-  height: 100%;
+  /*height: 100%;*/
 }
 
 .card__info {
@@ -93,12 +93,11 @@
   display: flex;
   flex-direction: row;
   gap: 40px;
-  min-height: 285px;
 }
 
 .card-list--vertical .card__image {
   width: 46.34%;
-  min-height: 285px;
+  height: 100%;
 }
 
 .card-list--vertical .card__info {
@@ -111,14 +110,10 @@
   margin: 0 0 15px;
 }
 
-.card-list--vertical .card__picture {
-  height: 100%;
-}
-
-
 .card-list--vertical .card__title {
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
   margin: 0 0 15px;
+  letter-spacing: 0.02em;
 }
