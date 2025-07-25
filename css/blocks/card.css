@@ -1,51 +1,80 @@
 .card {
-  width: calc((100% - 30px) / 2);
+  width: 100%;
+  height: 100%; /* Растягиваем карточку на всю высоту card__item */
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  overflow: hidden; /* Чтобы контент не вылезал за границы */
+}
+
+.card__image {
+  height: 300px;
+  width: 100%;
+  margin: 0;
+}
+
+.card__picture {
+  object-fit: cover; /* Картинка заполняет контейнер без искажений */
+  height: 100%;
+}
+
+.card__info {
+  width: 100%;
+  min-height: 270px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
   background-color: #F2F3EE;
-  border-radius: 20px;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card__date {
   font-size: 14px;
   line-height: 18px;
-  color: rgba(29, 37, 45, 0.5);
+  color: #1D252D80;
   display: block;
-  text-align: right;
-  margin: 0 0 10px 0;
+  text-align: left;
+  margin: 0 0 10px;
+  font-weight: 300;
 }
 
-.card__h2 {
+.card__title {
+  font-weight: 300;
   font-size: 22px;
   line-height: 26px;
   letter-spacing: 0.02em;
-  font-weight: 300;
-  margin: 0 0 20px 0;
-}
-
-.card__img-picture-figure {
-  height: 300px;
-  width: 600px;
-  border-radius: 12px;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
 }
 
 .card__text {
+  font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-  margin: 0 0 30px 0;
+  margin: 0;
+  color: #1D252D;
 }
 
-.card__inner-content--wrapper-bottom {
+.card__number {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1D252D80;
+}
+
+.card__links {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-}
-
-.card__views--number {
-  font-size: 14px;
-  line-height: 18px;
-  color:rgba(29, 37, 45, 0.5);
 }
 
 .card__link {
@@ -56,4 +85,40 @@
   background-color: #D6D2C4;
   text-align: center;
   font-weight: 300;
+  color: #1D252D;
+}
+
+.card-list--vertical .card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  min-height: 285px;
+}
+
+.card-list--vertical .card__image {
+  width: 46.34%;
+  min-height: 285px;
+}
+
+.card-list--vertical .card__info {
+  width: 50.41%;
+  min-height: 285px;
+  gap: 22px;
+}
+
+.card-list--vertical .card__title {
+  margin: 0 0 15px;
+}
+
+.card-list--vertical .card__picture {
+  height: 100%;
+}
+
+
+.card-list--vertical .card__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 15px;
 }
